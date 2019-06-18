@@ -26,19 +26,25 @@ para[1].addEventListener('mousemove', function (j) {
     j.stopPropagation();
 });
 para[2].addEventListener('mouseup', function (k) {
-    k.target.style.color = 'brown';
+    k.target.style.fontSize = '50px';
     k.stopPropagation();
 });
-para[3].addEventListener('mousedown', function (i) {
-    i.target.style.color = 'crimson';
-    i.stopPropagation();
+para[3].addEventListener('mousedown', function (l) {
+    l.target.style.color = 'crimson';
+    l.stopPropagation();
 });
-para[4].addEventListener('mouseenter', function (j) {
-    j.target.style.color = 'gold';
-    j.stopPropagation();
-});
-para[5].addEventListener('mouseleave', function (k) {
-    k.target.style.color = 'silver';
-    k.stopPropagation();
+para[4].addEventListener('mouseenter', function (m) {
+    m.target.style.color = 'gold';
+    m.stopPropagation();
 });
 console.log(para);
+const pictures = document.querySelectorAll('img');
+
+pictures.forEach(image => image.addEventListener('mouseover', event =>{
+    event.target.style.border = '8px solid red';
+    event.preventDefault();
+}));
+const links = document.getElementsByClassName('nav-link');
+links.addEventListener('mouseover', function (g) {
+});
+event.preventDefault();
