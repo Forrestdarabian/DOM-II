@@ -26,7 +26,7 @@ para[1].addEventListener('mousemove', function (j) {
     j.stopPropagation();
 });
 para[2].addEventListener('mouseup', function (k) {
-    k.target.style.fontSize = '50px';
+    alert("I am an alert box!");
     k.stopPropagation();
 });
 para[3].addEventListener('mousedown', function (l) {
@@ -34,17 +34,30 @@ para[3].addEventListener('mousedown', function (l) {
     l.stopPropagation();
 });
 para[4].addEventListener('mouseenter', function (m) {
-    m.target.style.color = 'gold';
+    m.target.style.fontSize = '10px';
     m.stopPropagation();
 });
 console.log(para);
-const pictures = document.querySelectorAll('img');
 
+const pictures = document.querySelectorAll('img');
 pictures.forEach(image => image.addEventListener('mouseover', event =>{
     event.target.style.border = '8px solid red';
     event.preventDefault();
 }));
-const links = document.getElementsByClassName('nav-link');
-links.addEventListener('mouseover', function (g) {
-});
-event.preventDefault();
+// const links = document.querySelectorAll('nav-link');
+// links.forEach(link => submit.addEventListener('mouseover', event =>{
+// event.target.style.border = '8px solid red';
+// event.preventDefault();
+// }));
+
+let links = document.querySelectorAll('nav-link')
+links.addEventListener('keydown', event => {
+ event.preventDefault()
+} )
+links.addEventListener('paste', event=> {
+ event.preventDefault()
+})
+links.addEventListener('dragover', event=> {
+ event.preventDefault()
+})
+
